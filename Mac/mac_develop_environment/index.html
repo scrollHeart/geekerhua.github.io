@@ -1,0 +1,883 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  
+    <title>mac开发环境配置 | GeekerHua的Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="GeekerHua">
+    
+
+    
+    <meta name="description" content="Homebrew Shell神器,OS X 不可或缺的套件管理器。Homebrew较之于Shell,好比CocoaPod较之于Xcode。这么说,Homebrew的定位就应该相当明确了吧！  # 安装ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot; # 卸载 ruby">
+<meta name="keywords" content="Shell,环境配置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mac开发环境配置">
+<meta property="og:url" content="blog.geekerhua.com/Mac/mac_develop_environment/index.html">
+<meta property="og:site_name" content="GeekerHua的Blog">
+<meta property="og:description" content="Homebrew Shell神器,OS X 不可或缺的套件管理器。Homebrew较之于Shell,好比CocoaPod较之于Xcode。这么说,Homebrew的定位就应该相当明确了吧！  # 安装ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot; # 卸载 ruby">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://7xtibb.com2.z0.glb.qiniucdn.com/2016-06-06-Shell_Homebrew安装失败.png">
+<meta property="og:updated_time" content="2019-04-07T07:07:52.755Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="mac开发环境配置">
+<meta name="twitter:description" content="Homebrew Shell神器,OS X 不可或缺的套件管理器。Homebrew较之于Shell,好比CocoaPod较之于Xcode。这么说,Homebrew的定位就应该相当明确了吧！  # 安装ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot; # 卸载 ruby">
+<meta name="twitter:image" content="http://7xtibb.com2.z0.glb.qiniucdn.com/2016-06-06-Shell_Homebrew安装失败.png">
+<meta name="twitter:creator" content="@GeekerHua">
+
+    
+    <link rel="alternative" href="/atom.xml" title="GeekerHua的Blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="GeekerHua的Blog" title="GeekerHua的Blog"></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="GeekerHua的Blog">GeekerHua的Blog</a></h1>
+				<h2 class="blog-motto">爱技术，更爱生活</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/categories">分类</a></li>
+					
+						<li><a href="/tags">标签</a></li>
+					
+						<li><a href="/about">关于我</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//www.google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索">
+						<input type="hidden" name="q" value="site:blog.geekerhua.com">
+					</form>
+					
+					</li>
+				</ul>
+			</ul></nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/Mac/mac_develop_environment/" title="mac开发环境配置" itemprop="url">mac开发环境配置</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="GeekerHua" target="_blank" itemprop="author">GeekerHua</a>
+		
+    <span id="busuanzi_container_page_pv">
+        总阅读<span id="busuanzi_value_page_pv"></span>次
+      </span>
+  </p><p class="article-time">
+    <time datetime="2017-01-12T20:18:28.000Z" itemprop="datePublished"> 发表于 2017-01-12</time>
+  </p>
+</header>
+
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Homebrew"><span class="toc-number">1.</span> <span class="toc-text">Homebrew</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#优秀的命令工具"><span class="toc-number">1.1.</span> <span class="toc-text">优秀的命令工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-htop"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.htop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-brew-cask"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.brew cask</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-tree"><span class="toc-number">1.1.3.</span> <span class="toc-text">3.tree</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-wget"><span class="toc-number">1.1.4.</span> <span class="toc-text">4.wget</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#xcode-selected"><span class="toc-number">2.</span> <span class="toc-text">xcode-selected</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#zsh"><span class="toc-number">3.</span> <span class="toc-text">zsh</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ruby升级"><span class="toc-number">4.</span> <span class="toc-text">ruby升级</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CocoaPods"><span class="toc-number">5.</span> <span class="toc-text">CocoaPods</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#vim"><span class="toc-number">6.</span> <span class="toc-text">vim</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#中文帮助文件"><span class="toc-number">6.1.</span> <span class="toc-text">中文帮助文件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#sublime-text3"><span class="toc-number">7.</span> <span class="toc-text">sublime text3</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Package-Control"><span class="toc-number">7.1.</span> <span class="toc-text">Package Control</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Package-Control-常用命令"><span class="toc-number">7.1.1.</span> <span class="toc-text">Package Control 常用命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用插件"><span class="toc-number">7.2.</span> <span class="toc-text">常用插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#javascript"><span class="toc-number">7.2.1.</span> <span class="toc-text">javascript</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python"><span class="toc-number">7.2.2.</span> <span class="toc-text">Python</span></a></li></ol></li></ol></li></ol>
+		
+		</div>
+		
+		<h1 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a><a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="noopener">Homebrew</a></h1><blockquote>
+<p>Shell神器,OS X 不可或缺的套件管理器。<code>Homebrew</code>较之于<code>Shell</code>,好比<code>CocoaPod</code>较之于<code>Xcode</code>。这么说,<code>Homebrew</code>的定位就应该相当明确了吧！</p>
+</blockquote>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装</span></span><br><span class="line">ruby -e <span class="string">"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 卸载</span></span><br><span class="line"> ruby -e <span class="string">"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>更新已安装的package<ul>
+<li>先更新brew：$ <code>brew update</code></li>
+<li>更新所有package：$ <code>brew upgarde</code></li>
+</ul>
+</li>
+<li>Homebrew下载的package存放的路径在哪里？<ul>
+<li><code>/Library/Caches/Homebrew/</code></li>
+</ul>
+</li>
+</ul>
+<p>Homebrew 可以很方便的安装需要的套件,方法如下：$ <code>brew install wget</code>。是不是很简单？</p>
+<p>Homebrew 使 OS X 更完美。使用 gem 来安装 gems、用 brew 来搞定那些依赖包。</p>
+<blockquote>
+<p>Tips: 如果安装过程中提示错误,提示先卸载,但执行卸载命令又卸载不掉,说明有曾经安装失败过,有残留。解决方式删除<code>/usr/local</code>文件夹即可。</p>
+</blockquote>
+<p><img src="http://7xtibb.com2.z0.glb.qiniucdn.com/2016-06-06-Shell_Homebrew安装失败.png" alt="Shell_Homebrew安装失败"></p>
+<h2 id="优秀的命令工具"><a href="#优秀的命令工具" class="headerlink" title="优秀的命令工具"></a>优秀的命令工具</h2><h3 id="1-htop"><a href="#1-htop" class="headerlink" title="1.htop"></a>1.htop</h3><blockquote>
+<p>带颜色的top工具，能够显示内存和CPU使用情况</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install htop</span><br></pre></td></tr></table></figure>
+<h3 id="2-brew-cask"><a href="#2-brew-cask" class="headerlink" title="2.brew cask"></a>2.<a href="https://caskroom.github.io" target="_blank" rel="noopener">brew cask</a></h3><blockquote>
+<p>一个基于终端的软件安装工具</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew tap caskroom/cask</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装软件(比如安装chrome)<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew cask install google-chrome</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="3-tree"><a href="#3-tree" class="headerlink" title="3.tree"></a>3.tree</h3><blockquote>
+<p>tree可以显示目录树,类似于ubuntu中的tree。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install tree</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>tree命令在mac下并不太好用，中文显示乱码有个解决方法如下，这是一个自己写的tree功能，支持中文显示</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">alias</span> tree=<span class="string">"find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-wget"><a href="#4-wget" class="headerlink" title="4.wget"></a>4.<a href="http://baike.baidu.com/link?url=_4E-kuBinS_AItjdR3vsisJTYpRsOCav7kEUifcKfUsLGMAML6kPVKJK0tVd5tOhLP13C_BnTzI7yFHFENwiKq" target="_blank" rel="noopener">wget</a></h3><blockquote>
+<p>wget是一个从网络上自动下载文件的自由工具，支持通过HTTP、HTTPS、FTP三个最常见的TCP/IP协议下载，并可以使用HTTP代理。wget名称的由来是“World Wide Web”与“get”的结合。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install wget</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="xcode-selected"><a href="#xcode-selected" class="headerlink" title="xcode-selected"></a>xcode-selected</h1><blockquote>
+<p>Mac下很多工具都需要xcode-selected支持，比如git。<br>如果没有安装的话，在终端输入<code>git</code>，会提示安装xcode commond line 工具。安装即可。</p>
+</blockquote>
+<hr>
+<h1 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h1><blockquote>
+<p>Linux及Mac默认的shell是Bash，但功能最强大的shell确实zsh，mac自带zsh，只是没有设置为默认shell，且shell配置复杂。使用oh-my-zsh进行配置,简单又强大.配合iTerm 2一同使用,简单又强大。</p>
+</blockquote>
+<ul>
+<li><p>安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建备份</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cp ~/.zshrc ~/.zshrc.orig</span><br><span class="line">cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>把 zsh 设置成默认的 shell</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chsh -s /bin/zsh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重启zsh</p>
+</li>
+</ul>
+<hr>
+<h1 id="ruby升级"><a href="#ruby升级" class="headerlink" title="ruby升级"></a>ruby升级</h1><blockquote>
+<p>rvm是什么？为什么要安装rvm呢，因为rvm可以让你拥有多个版本的Ruby，并且可以在多个版本之间自由切换。</p>
+</blockquote>
+<p>第一步安装rvm<br><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">$ curl -L get.rvm.io <span class="params">| bash -s stable</span></span><br><span class="line"><span class="params">$ source ~/.rvm/scripts/rvm</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>等待终端加载完毕,后输入：<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">rvm -v</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>如果能显示版本好则安装成功了。<br>第二步：安装ruby</p>
+<ul>
+<li><p>列出ruby可安装的版本信息</p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">rvm list known</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装一个ruby版本</p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">rvm install <span class="number">2.1</span>.<span class="number">4</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>如果想设置为默认版本，可以用这条命令来完成<br><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">rvm use <span class="number">2.1</span>.<span class="number">4</span> --default</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>查看已安装的ruby</p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">rvm list</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>卸载一个已安装ruby版本</p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">rvm remove <span class="number">2.1</span>.<span class="number">4</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h1 id="CocoaPods"><a href="#CocoaPods" class="headerlink" title="CocoaPods"></a>CocoaPods</h1><blockquote>
+<p>CocoaPods是Xcode的包管理工具，主要用在OC中，Swift中也能应用。帮助开发者管理iOS第三方框架的工具</p>
+</blockquote>
+<ul>
+<li><ol>
+<li>查看当前的ruby源: <code>gem source -l</code></li>
+</ol>
+</li>
+<li><ol start="2">
+<li>修改ruby源<ul>
+<li>删除旧源: gem sources –remove <a href="https://rubygems.org/" target="_blank" rel="noopener">https://rubygems.org/</a></li>
+<li>添加新源:  <a href="https://gems.ruby-china.org/" target="_blank" rel="noopener">https://gems.ruby-china.org/</a></li>
+<li>查看新源: gem source -l</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>3.安装CocoaPods: sudo gem install cocoapods (可能需要等待较长时间)</li>
+<li><p>4.利用CocoaPods管理第三方框架</p>
+<ul>
+<li>打开Xcode新建项目</li>
+<li>利用终端进入新项目的根路径</li>
+<li>新建Podfile文件: vim Podfile, 在这个文件中描述需要依赖的第三方框架<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">platform :ios, &apos;8.0&apos;</span><br><span class="line">pod &apos;UIView+AutoLayout&apos;, &apos;~&gt; 2.0&apos;</span><br><span class="line">pod &apos;MJExtension&apos;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>5.解析Podfile文件</p>
+<ul>
+<li>建议先更新远程的框架信息: pod setup</li>
+<li>开始解析Podfile文件: pod install (可能需要等待较长时间)<ul>
+<li>pod install 换成pod install –verbose –no-repo-update这个命令，前面的命令被墙了 ,pod update 同理</li>
+</ul>
+</li>
+<li>如果需要更新框架: pod update</li>
+</ul>
+</li>
+<li>6.其它用法<ul>
+<li>使用pod search 关键词可以搜索支持CocoaPods的第三方框架 (并不是所有第三方框架都支持CocoaPods)</li>
+<li>建议在进行pod search、pod update、pod install之前都先进行pod setup</li>
+<li>如果在使用CocoaPods过程中遇到了莫名其妙的错误（比如NoMethodError），大部分原因是mac上的Ruby环境不是最新的。可以考虑更新Ruby环境: sudo gem update</li>
+</ul>
+</li>
+<li>直接在终端添加新依赖  $  pod ‘SVProgressHUD’, ‘~&gt; 1.1.2’ &gt; Podfile</li>
+</ul>
+<hr>
+<h1 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h1><blockquote>
+<p>vim号称编辑器之神，拥有强大的功能和众多的插件。</p>
+</blockquote>
+<h2 id="中文帮助文件"><a href="#中文帮助文件" class="headerlink" title="中文帮助文件"></a><a href="http://sourceforge.net/projects/vimcdoc/files/latest/download" target="_blank" rel="noopener">中文帮助文件</a></h2><ul>
+<li>安装<a href="http://sourceforge.net/projects/vimcdoc/files/latest/download" target="_blank" rel="noopener">http://sourceforge.net/projects/vimcdoc/files/latest/download</a></li>
+<li><p>解压后进入文件夹,执行 <code>sudo ./vimcdoc.sh -i</code> #安装</p>
+<blockquote>
+<p>vim中文文档不会覆盖原英文文档，安装后vim默认使用中文文档。若想使用英文文档，可在vim中执行以下命令：</p>
+</blockquote>
+<ul>
+<li><p>:set helplang=en  回车之后 :help 就是英文的help。</p>
+<blockquote>
+<p>同理，使用以下命令可重新使用中文文档：</p>
+</blockquote>
+</li>
+<li><p>:set helplang=cn 回车之后 :help 就是中文的help。</p>
+</li>
+</ul>
+</li>
+<li><p>在解包之后的文件夹中使用以下命令可以卸载vim中文文档：</p>
+<ul>
+<li>$sudo ./vimcdoc.sh -u</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="sublime-text3"><a href="#sublime-text3" class="headerlink" title="sublime text3"></a>sublime text3</h1><h2 id="Package-Control"><a href="#Package-Control" class="headerlink" title="Package Control"></a><a href="https://sublime.wbond.net/packages/Package%20Control" target="_blank" rel="noopener">Package Control</a></h2><blockquote>
+<p>提到 Sublime Text，就不得不说 Package Control，就像 Linux 下的 apt-get 和 yum 一样，它是 Sublime Text 的包管理器，你用它可以轻松地找到你想要的插件和管理已有插件。</p>
+</blockquote>
+<ul>
+<li>使用<code>control</code> + <code>~</code>打开控制台，将从官网<a href="https://sublime.wbond.net/installation#st3" target="_blank" rel="noopener">复制代码</a>粘贴到控制台并执行。</li>
+<li>安装代码如下<br> import urllib.request,os,hashlib; h = ‘2915d1851351e5ee549c20394736b442’ + ‘8bc59f460fa1548d1514676163dafc88’; pf = ‘Package Control.sublime-package’; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( ‘<a href="http://packagecontrol.io/&#39;" target="_blank" rel="noopener">http://packagecontrol.io/&#39;</a> + pf.replace(‘ ‘, ‘%20’)).read(); dh = hashlib.sha256(by).hexdigest(); print(‘Error validating download (got %s instead of %s), please try manual install’ % (dh, h)) if dh != h else open(os.path.join( ipp, pf), ‘wb’ ).write(by)<h3 id="Package-Control-常用命令"><a href="#Package-Control-常用命令" class="headerlink" title="Package Control 常用命令"></a>Package Control 常用命令</h3></li>
+<li>激活<code>cmd+shift+P</code></li>
+<li>安装插件 ->  Package Control: Install Package xxx</li>
+<li>显示所有已安装的插件 -> List Packages </li>
+<li>移除一个指定的插件 -> Remove Packages </li>
+<li>更新一个指定的插件 -> Upgrade Package </li>
+<li>更新所有已安装的插件 -> Upgrade/Overwrite All Packages </li>
+</ul>
+<h2 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h2><h3 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h3><ul>
+<li><p><a href="http://docs.emmet.io" target="_blank" rel="noopener">emmet</a></p>
+<blockquote>
+<p><a href="http://docs.emmet.io/cheat-sheet/" target="_blank" rel="noopener">速查表</a><br><a href="http://docs.emmet.io/" target="_blank" rel="noopener">官方文档</a></p>
+</blockquote>
+<ul>
+<li>安装<ul>
+<li>按Ctrl+Shift+P命令板</li>
+<li>输入install然后选择install Package，然后输入emmet找到 Emmet Css Snippets，点击就可以自动完成安装。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Better Completion</p>
+<ul>
+<li>自动补全Bootstrap 、JQuery、Less等<h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3></li>
+</ul>
+</li>
+<li>SubLimener<ul>
+<li>编码规范</li>
+</ul>
+</li>
+</ul>
+  
+	</div>
+		
+    <!-- css -->
+    <style type="text/css">
+        .center {
+            text-align: center;
+        }
+        .hidden {
+            display: none;
+        }
+        #donate_guide a {
+            display: inline-block;
+            text-align: center;
+        }
+        .donate_bar a.btn_donate{
+            display: inline-block;
+            width: auto;
+            height: 32px;
+        }
+
+        .donate_bar a.btn_donate:hover{ background-position: 0px -82px;}
+        .donate_bar .donate_txt {
+            display: block;
+            color: #9d9d9d;
+            font: 14px/2 "Microsoft Yahei";
+        }
+        .bold{ font-weight: bold; }
+    </style>
+    <!-- /css -->
+
+    <!-- Donate Module -->
+    <div id="donate_module">
+
+    <!-- btn_donate & tips -->
+    <div id="donate_board" class="donate_bar center">
+        <a id="btn_donate" class="btn_donate" target="_self" href="javascript:;" title="打赏支持">看都看完了，支持下啦~</a>
+        
+    </div>
+    <!-- /btn_donate & tips -->
+
+    <!-- donate guide -->
+    
+    <div id="donate_guide" class="donate_bar center hidden">
+        <a href="/img/wechat.jpg" title="用微信扫一扫哦~" class="fancybox" rel="article0">
+            <img src="/img/wechat.jpg" title="微信打赏 Donate" height="190px" width="auto" style="display:block">
+            用微信扫一扫哦~
+        </a>
+        
+        <a href="/img/alipay.jpg" title="用支付宝扫一扫即可~" class="fancybox" rel="article0">
+            <img src="/img/alipay.jpg" title="支付宝打赏 Donate" height="190px" width="auto" style="display:block">
+            用支付宝扫一扫即可~
+        </a>
+    </div>
+    <!-- /donate guide -->
+
+    <!-- donate script -->
+    <script type="text/javascript">
+        document.getElementById('btn_donate').onclick = function() {
+            $('#donate_board').addClass('hidden');
+        $('#donate_guide').removeClass('hidden');
+        }
+
+        function donate_on_web(){
+            $('#donate').submit();
+        }
+
+        var original_window_onload = window.onload;
+        window.onload = function () {
+            if (original_window_onload) {
+                original_window_onload();
+            }
+            // document.getElementById('donate_board_wdg').className = 'hidden';
+        }
+    </script>
+    <!-- /donate script -->
+</div>
+<!-- /Donate Module -->
+
+   	       
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Mac工作法/">Mac工作法</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Shell/">Shell</a><a href="/tags/环境配置/">环境配置</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="blog.geekerhua.com/Mac/mac_develop_environment/" data-title="mac开发环境配置 | GeekerHua的Blog" data-tsina class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+
+<script>
+	(function(){
+			var bp = document.createElement('script');
+			var curProtocol = window.location.protocol.split(':')[0];
+			if (curProtocol === 'https') {
+					bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+			}
+			else {
+					bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+			}
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(bp, s);
+	})();
+</script>
+</footer>
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev">
+ <a href="/Linux/Linux_foundation/" title="Linux命令基础">
+  <strong>上一篇：</strong><br>
+  <span>
+  Linux命令基础</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/thinking/infomation/" title="信息爆炸的时代，该怎么有效获取信息">
+ <strong>下一篇：</strong><br> 
+ <span>信息爆炸的时代，该怎么有效获取信息
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+
+
+  <!-- 来必力City版安装代码 -->
+  <!-- <div id="lv-container" data-id="city" data-uid="MTAyMC80MzU5Mi8yMDEzMQ=="> -->
+  <div id="lv-container" data-id="city" data-uid="MTAyMC80MzU5Mi8yMDEzMQ">
+    <script type="text/javascript">
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+
+        if (typeof LivereTower === 'function') { return; }
+
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+    </script>
+  <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+  </div>
+  <!-- City版安装代码已完成 -->
+
+
+</div>  
+
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Homebrew"><span class="toc-number">1.</span> <span class="toc-text">Homebrew</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#优秀的命令工具"><span class="toc-number">1.1.</span> <span class="toc-text">优秀的命令工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-htop"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.htop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-brew-cask"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.brew cask</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-tree"><span class="toc-number">1.1.3.</span> <span class="toc-text">3.tree</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-wget"><span class="toc-number">1.1.4.</span> <span class="toc-text">4.wget</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#xcode-selected"><span class="toc-number">2.</span> <span class="toc-text">xcode-selected</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#zsh"><span class="toc-number">3.</span> <span class="toc-text">zsh</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ruby升级"><span class="toc-number">4.</span> <span class="toc-text">ruby升级</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CocoaPods"><span class="toc-number">5.</span> <span class="toc-text">CocoaPods</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#vim"><span class="toc-number">6.</span> <span class="toc-text">vim</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#中文帮助文件"><span class="toc-number">6.1.</span> <span class="toc-text">中文帮助文件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#sublime-text3"><span class="toc-number">7.</span> <span class="toc-text">sublime text3</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Package-Control"><span class="toc-number">7.1.</span> <span class="toc-text">Package Control</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Package-Control-常用命令"><span class="toc-number">7.1.1.</span> <span class="toc-text">Package Control 常用命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用插件"><span class="toc-number">7.2.</span> <span class="toc-text">常用插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#javascript"><span class="toc-number">7.2.1.</span> <span class="toc-text">javascript</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python"><span class="toc-number">7.2.2.</span> <span class="toc-text">Python</span></a></li></ol></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+	<div class="category-block">
+		<h3 class="asidetitle">分类</h3>
+			 <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/BenchMark/">BenchMark</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux命令/">Linux命令</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux工作法/">Linux工作法</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux满汉全席/">Linux满汉全席</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mac工作法/">Mac工作法</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思考/">思考</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/效率/">效率</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/生活/感想/">感想</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/编程/">编程</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/阅读/">阅读</a><span class="category-list-count">1</span></li></ul>
+	</div>
+
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>16</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Soft/" title="Soft">Soft<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Alfred/" title="Alfred">Alfred<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Python/" title="Python">Python<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/环境配置/" title="环境配置">环境配置<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/成长/" title="成长">成长<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Other/" title="Other">Other<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/io/" title="io">io<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/cpu/" title="cpu">cpu<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/IDE/" title="IDE">IDE<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/科学上网/" title="科学上网">科学上网<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Swift/" title="Swift">Swift<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/读书笔记/" title="读书笔记">读书笔记<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/iOS/" title="iOS">iOS<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/interview/" title="interview">interview<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/方法论/" title="方法论">方法论<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://junstat.github.io" target="_blank" title="GeekerJun's Blog">GeekerJun的博客</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://swift.gg" target="_blank" title="走心的Swift翻译组">SwiftGG</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://scp.net.cn" target="_blank" title="西二三旗的垃圾桶">BB4BB</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">标签云</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/Alfred/" style="font-size: 16.67px;">Alfred</a> <a href="/tags/IDE/" style="font-size: 10px;">IDE</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/Other/" style="font-size: 11.67px;">Other</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Shell/" style="font-size: 13.33px;">Shell</a> <a href="/tags/Soft/" style="font-size: 18.33px;">Soft</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/cpu/" style="font-size: 10px;">cpu</a> <a href="/tags/git/" style="font-size: 11.67px;">git</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/interview/" style="font-size: 10px;">interview</a> <a href="/tags/io/" style="font-size: 10px;">io</a> <a href="/tags/成长/" style="font-size: 11.67px;">成长</a> <a href="/tags/方法论/" style="font-size: 10px;">方法论</a> <a href="/tags/环境配置/" style="font-size: 11.67px;">环境配置</a> <a href="/tags/科学上网/" style="font-size: 10px;">科学上网</a> <a href="/tags/读书笔记/" style="font-size: 10px;">读书笔记</a>
+    </div>
+  </div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer">
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 没有梦想就没有未来 <br>
+			Without dreams, we have no future.</p>
+	</section>
+	 
+	<div class="social-font">
+		
+		<a href="https://weibo.com/geekerhua" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/geekerhua" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		<a href="https://twitter.com/GeekerHua" target="_blank" class="icon-twitter" title="twitter"></a>
+		
+		
+		<a href="https://www.facebook.com/100014141115493" target="_blank" class="icon-facebook" title="facebook"></a>
+		
+		
+		<a href="https://www.linkedin.com/in/振华-杭-35b122126" target="_blank" class="icon-linkedin" title="linkedin"></a>
+		
+		
+		
+		<a href="https://www.zhihu.com/people/hang-zhen-hua-82" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:geekerhua@sina.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2019 
+		
+		<a href="/about" target="_blank" title="GeekerHua">GeekerHua</a>
+		
+		
+		</p>
+</div>
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<span id="busuanzi_container_site_pv">
+	Total visits: <span id="busuanzi_value_site_pv"></span>
+</span>
+<span id="busuanzi_container_site_uv">
+	You are Visiter No.<span id="busuanzi_value_site_uv"></span>
+</span>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

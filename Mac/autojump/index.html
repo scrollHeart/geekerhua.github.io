@@ -1,0 +1,687 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  
+    <title>autojump | GeekerHua的Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="GeekerHua">
+    
+
+    
+    <meta name="description" content="经常在终端进行操作的时候，路径的频繁切换是一件很麻烦的事情。使用autojump能够快速的在经常使用的路径中切换，省了不少麻烦。   参考文章  安装$ brew install autojump $ echo &apos;[ -f /usr/local/etc/profile.d/autojump.sh  ] &amp;amp;&amp;amp; . /usr/local/etc/profile.d/autojump.">
+<meta name="keywords" content="Soft">
+<meta property="og:type" content="article">
+<meta property="og:title" content="autojump">
+<meta property="og:url" content="blog.geekerhua.com/Mac/autojump/index.html">
+<meta property="og:site_name" content="GeekerHua的Blog">
+<meta property="og:description" content="经常在终端进行操作的时候，路径的频繁切换是一件很麻烦的事情。使用autojump能够快速的在经常使用的路径中切换，省了不少麻烦。   参考文章  安装$ brew install autojump $ echo &apos;[ -f /usr/local/etc/profile.d/autojump.sh  ] &amp;amp;&amp;amp; . /usr/local/etc/profile.d/autojump.">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-04-07T07:07:52.755Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="autojump">
+<meta name="twitter:description" content="经常在终端进行操作的时候，路径的频繁切换是一件很麻烦的事情。使用autojump能够快速的在经常使用的路径中切换，省了不少麻烦。   参考文章  安装$ brew install autojump $ echo &apos;[ -f /usr/local/etc/profile.d/autojump.sh  ] &amp;amp;&amp;amp; . /usr/local/etc/profile.d/autojump.">
+<meta name="twitter:creator" content="@GeekerHua">
+
+    
+    <link rel="alternative" href="/atom.xml" title="GeekerHua的Blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="GeekerHua的Blog" title="GeekerHua的Blog"></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="GeekerHua的Blog">GeekerHua的Blog</a></h1>
+				<h2 class="blog-motto">爱技术，更爱生活</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/categories">分类</a></li>
+					
+						<li><a href="/tags">标签</a></li>
+					
+						<li><a href="/about">关于我</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//www.google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索">
+						<input type="hidden" name="q" value="site:blog.geekerhua.com">
+					</form>
+					
+					</li>
+				</ul>
+			</ul></nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/Mac/autojump/" title="autojump" itemprop="url">autojump</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="GeekerHua" target="_blank" itemprop="author">GeekerHua</a>
+		
+    <span id="busuanzi_container_page_pv">
+        总阅读<span id="busuanzi_value_page_pv"></span>次
+      </span>
+  </p><p class="article-time">
+    <time datetime="2017-08-01T16:00:12.000Z" itemprop="datePublished"> 发表于 2017-08-01</time>
+  </p>
+</header>
+
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用方法"><span class="toc-number">2.</span> <span class="toc-text">常用方法</span></a></li></ol>
+		
+		</div>
+		
+		<blockquote>
+<p>经常在终端进行操作的时候，路径的频繁切换是一件很麻烦的事情。使用autojump能够快速的在经常使用的路径中切换，省了不少麻烦。</p>
+</blockquote>
+<blockquote>
+<p><a href="http://www.jianshu.com/p/23aeb7c4d89b" target="_blank" rel="noopener">参考文章</a></p>
+</blockquote>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ brew install autojump</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">'[ -f /usr/local/etc/profile.d/autojump.sh  ] &amp;&amp; . /usr/local/etc/profile.d/autojump.sh'</span> &gt;&gt; .zshrc</span><br><span class="line">$ <span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+<h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">// 进入目录</span><br><span class="line">j dir</span><br><span class="line"></span><br><span class="line">// 子目录</span><br><span class="line">jc child</span><br><span class="line"></span><br><span class="line">// 打开目录</span><br><span class="line">jo dir</span><br><span class="line"></span><br><span class="line">// 打开子目录</span><br><span class="line">jco</span><br><span class="line"></span><br><span class="line">// 两个 inbox</span><br><span class="line">&gt; 30   /home/user/mail/inbox</span><br><span class="line">&gt; 10   /home/user/work/inbox</span><br><span class="line">j <span class="keyword">in</span>   //自动进入权重高的</span><br><span class="line">j w <span class="keyword">in</span>   //加个关键词呗</span><br></pre></td></tr></table></figure>  
+	</div>
+		
+    <!-- css -->
+    <style type="text/css">
+        .center {
+            text-align: center;
+        }
+        .hidden {
+            display: none;
+        }
+        #donate_guide a {
+            display: inline-block;
+            text-align: center;
+        }
+        .donate_bar a.btn_donate{
+            display: inline-block;
+            width: auto;
+            height: 32px;
+        }
+
+        .donate_bar a.btn_donate:hover{ background-position: 0px -82px;}
+        .donate_bar .donate_txt {
+            display: block;
+            color: #9d9d9d;
+            font: 14px/2 "Microsoft Yahei";
+        }
+        .bold{ font-weight: bold; }
+    </style>
+    <!-- /css -->
+
+    <!-- Donate Module -->
+    <div id="donate_module">
+
+    <!-- btn_donate & tips -->
+    <div id="donate_board" class="donate_bar center">
+        <a id="btn_donate" class="btn_donate" target="_self" href="javascript:;" title="打赏支持">看都看完了，支持下啦~</a>
+        
+    </div>
+    <!-- /btn_donate & tips -->
+
+    <!-- donate guide -->
+    
+    <div id="donate_guide" class="donate_bar center hidden">
+        <a href="/img/wechat.jpg" title="用微信扫一扫哦~" class="fancybox" rel="article0">
+            <img src="/img/wechat.jpg" title="微信打赏 Donate" height="190px" width="auto" style="display:block">
+            用微信扫一扫哦~
+        </a>
+        
+        <a href="/img/alipay.jpg" title="用支付宝扫一扫即可~" class="fancybox" rel="article0">
+            <img src="/img/alipay.jpg" title="支付宝打赏 Donate" height="190px" width="auto" style="display:block">
+            用支付宝扫一扫即可~
+        </a>
+    </div>
+    <!-- /donate guide -->
+
+    <!-- donate script -->
+    <script type="text/javascript">
+        document.getElementById('btn_donate').onclick = function() {
+            $('#donate_board').addClass('hidden');
+        $('#donate_guide').removeClass('hidden');
+        }
+
+        function donate_on_web(){
+            $('#donate').submit();
+        }
+
+        var original_window_onload = window.onload;
+        window.onload = function () {
+            if (original_window_onload) {
+                original_window_onload();
+            }
+            // document.getElementById('donate_board_wdg').className = 'hidden';
+        }
+    </script>
+    <!-- /donate script -->
+</div>
+<!-- /Donate Module -->
+
+   	       
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Mac工作法/">Mac工作法</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Soft/">Soft</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="blog.geekerhua.com/Mac/autojump/" data-title="autojump | GeekerHua的Blog" data-tsina class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+
+<script>
+	(function(){
+			var bp = document.createElement('script');
+			var curProtocol = window.location.protocol.split(':')[0];
+			if (curProtocol === 'https') {
+					bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+			}
+			else {
+					bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+			}
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(bp, s);
+	})();
+</script>
+</footer>
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev">
+ <a href="/Mac/bartender2/" title="Bartender2菜单栏图标收纳神器">
+  <strong>上一篇：</strong><br>
+  <span>
+  Bartender2菜单栏图标收纳神器</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/Mac/alfred/" title="Alfred：效率神器，没有之一">
+ <strong>下一篇：</strong><br> 
+ <span>Alfred：效率神器，没有之一
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+
+
+  <!-- 来必力City版安装代码 -->
+  <!-- <div id="lv-container" data-id="city" data-uid="MTAyMC80MzU5Mi8yMDEzMQ=="> -->
+  <div id="lv-container" data-id="city" data-uid="MTAyMC80MzU5Mi8yMDEzMQ">
+    <script type="text/javascript">
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+
+        if (typeof LivereTower === 'function') { return; }
+
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+    </script>
+  <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+  </div>
+  <!-- City版安装代码已完成 -->
+
+
+</div>  
+
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用方法"><span class="toc-number">2.</span> <span class="toc-text">常用方法</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+	<div class="category-block">
+		<h3 class="asidetitle">分类</h3>
+			 <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/BenchMark/">BenchMark</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux命令/">Linux命令</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux工作法/">Linux工作法</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux满汉全席/">Linux满汉全席</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mac工作法/">Mac工作法</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/思考/">思考</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/效率/">效率</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/生活/感想/">感想</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/编程/">编程</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/阅读/">阅读</a><span class="category-list-count">1</span></li></ul>
+	</div>
+
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>16</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Soft/" title="Soft">Soft<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Alfred/" title="Alfred">Alfred<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Python/" title="Python">Python<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Shell/" title="Shell">Shell<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/环境配置/" title="环境配置">环境配置<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/成长/" title="成长">成长<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Other/" title="Other">Other<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/io/" title="io">io<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/cpu/" title="cpu">cpu<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/IDE/" title="IDE">IDE<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/科学上网/" title="科学上网">科学上网<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Swift/" title="Swift">Swift<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/读书笔记/" title="读书笔记">读书笔记<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/iOS/" title="iOS">iOS<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/interview/" title="interview">interview<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/方法论/" title="方法论">方法论<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://junstat.github.io" target="_blank" title="GeekerJun's Blog">GeekerJun的博客</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://swift.gg" target="_blank" title="走心的Swift翻译组">SwiftGG</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://scp.net.cn" target="_blank" title="西二三旗的垃圾桶">BB4BB</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">标签云</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/Alfred/" style="font-size: 16.67px;">Alfred</a> <a href="/tags/IDE/" style="font-size: 10px;">IDE</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/Other/" style="font-size: 11.67px;">Other</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Shell/" style="font-size: 13.33px;">Shell</a> <a href="/tags/Soft/" style="font-size: 18.33px;">Soft</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/cpu/" style="font-size: 10px;">cpu</a> <a href="/tags/git/" style="font-size: 11.67px;">git</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/interview/" style="font-size: 10px;">interview</a> <a href="/tags/io/" style="font-size: 10px;">io</a> <a href="/tags/成长/" style="font-size: 11.67px;">成长</a> <a href="/tags/方法论/" style="font-size: 10px;">方法论</a> <a href="/tags/环境配置/" style="font-size: 11.67px;">环境配置</a> <a href="/tags/科学上网/" style="font-size: 10px;">科学上网</a> <a href="/tags/读书笔记/" style="font-size: 10px;">读书笔记</a>
+    </div>
+  </div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer">
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 没有梦想就没有未来 <br>
+			Without dreams, we have no future.</p>
+	</section>
+	 
+	<div class="social-font">
+		
+		<a href="https://weibo.com/geekerhua" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/geekerhua" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		<a href="https://twitter.com/GeekerHua" target="_blank" class="icon-twitter" title="twitter"></a>
+		
+		
+		<a href="https://www.facebook.com/100014141115493" target="_blank" class="icon-facebook" title="facebook"></a>
+		
+		
+		<a href="https://www.linkedin.com/in/振华-杭-35b122126" target="_blank" class="icon-linkedin" title="linkedin"></a>
+		
+		
+		
+		<a href="https://www.zhihu.com/people/hang-zhen-hua-82" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:geekerhua@sina.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="https://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2019 
+		
+		<a href="/about" target="_blank" title="GeekerHua">GeekerHua</a>
+		
+		
+		</p>
+</div>
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<span id="busuanzi_container_site_pv">
+	Total visits: <span id="busuanzi_value_site_pv"></span>
+</span>
+<span id="busuanzi_container_site_uv">
+	You are Visiter No.<span id="busuanzi_value_site_uv"></span>
+</span>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
